@@ -28,8 +28,14 @@ Ensure you have the following installed:
    git clone https://github.com/AdityaKhandelwal2306/TextClassification.git
    cd TextClassification
    ```
+2. Create and Activate a Virtual Environment
+   ```bash
+   python -m venv venv
+   source venv/bin/activate  # For macOS/Linux
+   venv\Scripts\activate   # For Windows
+   ```
 
-2. Install the dependencies:
+3. Install the dependencies:
    ```bash
    pip install -r requirements.txt
    ```
@@ -55,8 +61,11 @@ Ensure you have the following installed:
    ```bash
    python evaluate.py
    ```
-
-5. Make predictions:
+5. Launch the API
+   ```bash
+   uvicorn app.main:app --reload
+   ```
+6. Make predictions:
    - Postman: Use the POST API to call the endpoint with the route:
      ```
      http://<localhostOrIP>:<port>/predict/
